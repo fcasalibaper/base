@@ -2,12 +2,13 @@ var controller;
 var altoScreen;
 var anchoScreen;
 var hDetalle;
-var availH;
+var redss;
 
 $(document).ready(function() {
 	// window.resize
 	_dHeight();
-	_Acomodar();	
+	_Acomodar();
+	//$(window).css('background':'#333');
 });
 
 $(window).resize(function() {

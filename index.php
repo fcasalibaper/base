@@ -15,7 +15,8 @@
 		<?php include 'header.inc.php'; ?>
 		<section class="container">
 		    <div class="row">
-		        <article class="col-sm-3">	
+		        <article class="col-sm-3">
+		        	h
 		        </article>
 		        <!-- fin -->
 		    </div>

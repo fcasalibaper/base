@@ -7,5 +7,5 @@
 <!--[if IE]>
     <link href="styles/styles.css" rel="stylesheet"  type="text/css"  />
 <![endif]-->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<!-- <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon"> -->
