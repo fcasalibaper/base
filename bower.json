@@ -1,0 +1,30 @@
+{
+  "name": "bowertest2",
+  "homepage": "https://github.com/fcasalibaper/base",
+  "_release": "879c605bff",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "879c605bffa0d8eed54eee22acb6e830c7ff71fb"
+  },
+  "_source": "git://github.com/fcasalibaper/base.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/fcasalibaper/base.git",
+  "version": "0.0.2",
+  "authors": [
+    "fcasalibaper <fernando.casaliba@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "watch": "*",
+    "bootstrap": "~3.3.4"
+  },
+  "main": "index.php"
+}

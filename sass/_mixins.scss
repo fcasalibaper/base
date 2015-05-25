@@ -1,0 +1,433 @@
+.cFull {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+@media (max-width:1265px) {
+	.cFull {
+		width: auto;
+		height: auto;
+		overflow: hidden;
+	}
+}
+
+html, body {
+	height: 100%;
+}
+p {
+	margin: 0
+}
+li {
+	list-style: none
+}
+.wrap {
+	position: relative;
+	height: 100%
+}
+%arial {
+	font-family: Arial
+}
+// backgrounds
+@mixin bg($background) {
+	background:$background
+}
+@mixin bgp($background-position) {
+	background-position:$background-position
+}
+@mixin bgi($background-image) {
+	background-image:url($background-image)
+}
+@mixin bgc($background-color) {
+	background-color:$background-color
+}
+@mixin bgs($background-size) {
+	background-size:$background-size
+}
+
+// FONTS
+$imp : !important;
+$blanco : #ffffff;
+$negro : #000000;
+$l : left;
+$r : right;
+$justify : justify;
+
+@mixin font-size( $value: 12 ) { 
+  font-size: value + px;
+  font − size: (value / 10) + rem;
+}
+@mixin line-height($heightValue: 12 ){
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (0.125 * $heightValue) + rem;
+}
+@mixin fs($font-size) {
+	font-size: $font-size
+}
+@mixin ls($letter-spacing) {
+	letter-spacing: $letter-spacing
+}
+@mixin fw($font-weight) {
+	font-weight: $font-weight
+}
+%italic {
+	font-style: italic
+}
+@mixin font($font-family) {
+	font-family:$font-family
+}
+@mixin lh($line-height) {
+	line-height: $line-height
+}
+%txl {
+	text-align: left
+}
+%txr {
+	text-align: right
+}
+%txj {
+	text-align: justify
+}
+%txc {
+	text-align: center
+}
+%upper {
+	text-transform: uppercase
+}
+@mixin tx ($text-align) {
+	text-align: $text-align
+}
+@mixin ti ($text-indent) {
+	text-indent:$text-indent
+}	
+@mixin c ($color) {
+	color:$color
+}
+// vertically centering
+@mixin ghostVerticalAlign(){
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: .1px;
+  }
+}
+@mixin truncateText($overflow: ellipsis){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+%text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+%contalmiddle {
+	display:table;
+	%almiddle {
+		display:table-cell;
+		vertical-align:middle;
+	}
+}
+
+// MARGINS
+%mAuto {
+	margin: auto
+}
+@mixin m($margin) {
+	margin: $margin
+}
+@mixin mtb($margin-top-bottom) {
+	margin-top: $margin-top-bottom;
+	margin-bottom: $margin-top-bottom;
+}
+@mixin mlr($margin-left-right) {
+	margin-left: $margin-left-right;
+	margin-right: $margin-left-right;
+}
+@mixin mt($margin-top) {
+	margin-top: $margin-top
+}
+@mixin mb($margin-bottom) {
+	margin-bottom: $margin-bottom
+}
+@mixin ml($margin-left) {
+	margin-left: $margin-left
+}
+@mixin mr($margin-right) {
+	margin-right: $margin-right
+}
+
+// PADDINGS
+@mixin p($padding) {
+	padding: $padding
+}
+@mixin ptb($padding-top-bottom) {
+	padding-top: $padding-top-bottom;
+	padding-bottom: $padding-top-bottom;
+}
+@mixin plr($padding-left-right) {
+	padding-left: $padding-left-right;
+	padding-right: $padding-left-right;
+}
+@mixin pb($padding-bottom) {
+	padding-bottom: $padding-bottom
+}
+@mixin pt($padding-top) {
+	padding-top: $padding-top
+}
+@mixin pl($padding-left) {
+	padding-left: $padding-left
+}
+@mixin pr($padding-right) {
+	padding-right: $padding-right
+}
+
+// SIZING
+@mixin w($width) {
+	width: $width
+}
+@mixin maxw($max-width) {
+	max-width: $max-width
+}
+@mixin minw($min-width) {
+	min-width: $min-width
+}
+@mixin h($height) {
+	height: $height
+}
+@mixin maxh($max-height) {
+	max-height: $max-height
+}
+@mixin minh($min-height) {
+	min-height: $min-height
+}
+
+// POSITIONS
+@mixin t($top) {
+	top:$top
+}
+@mixin b($bottom) {
+	bottom:$bottom
+}
+@mixin l($left) {
+	left:$left
+}
+@mixin r($right) {
+	right:$right
+}
+.relative {
+	position:relative
+}
+.absolute {
+	position:absolute
+}
+.fixed {
+	position:fixed
+}
+
+// DISPLAYS
+%none {
+	display:none
+}
+%block {
+	display:block
+}
+%inline {
+	display:inline
+}
+%inline-block {
+	display:inline-block
+}
+
+// FLOATS & CLEARS
+%fl {
+	float:left
+}
+%fr {
+	float:right
+}
+%fn {
+	float:none
+}
+%cl {
+	clear:left
+}
+%cr {
+	clear:right
+}
+%cb {
+	clear:both
+}
+%z9 {
+	z-index:99999999999999
+}
+@mixin z($z-index) {
+	z-index: $z-index
+}
+%pointer {
+	cursor:pointer
+}
+.nopointer {
+	cursor: default !important;
+}
+// BORDERS
+@mixin bd($border) {
+	border: $border
+}
+@mixin bdt($border-top) {
+	border-top: $border-top
+}
+@mixin bdb($border-bottom) {
+	border-bottom: $border-bottom
+}
+@mixin bdl($border-left) {
+	border-left: $border-left
+}
+@mixin bdr($border-right) {
+	border-right: $border-right
+}
+// BORDER-RADIUS
+@mixin border-radius ( $value: 3px ) {
+  -webkit-border-radius: $value;
+  -moz-border-radius: $value;
+  border-radius: $value; 
+  // keeps background from busting out of border 
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+// OPACITY
+@mixin opacity($value){
+  $ie-value: $value * 100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$ie-value+")";
+  filter: alpha(opacity=$ie-value);
+}
+
+// BOX-SHADOW
+@mixin box-shadow( $horiz : .5em , $vert : .5em , $blur : 0px , $spread : 0px , $color : #000000 ){
+  -webkit-box-shadow: $horiz $vert $blur $spread $color;
+  -moz-box-shadow: $horiz $vert $blur $spread $color;
+  box-shadow: $horiz $vert $blur $spread $color;
+}
+
+// DEGRADADO
+@mixin deg ($deg, $deg2) {
+	background: $deg;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from($deg), to($deg2));
+	background: -webkit-linear-gradient($deg, $deg2);
+	background: -moz-linear-gradient($deg, $deg2);
+	background: -ms-linear-gradient($deg, $deg2);
+	background: -o-linear-gradient($deg, $deg2);
+	background: linear-gradient($deg, $deg2);
+}
+
+// MEDIAQUERIES
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (max-width: 767px) { @content; }
+  }
+  @else if $point == sm {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == md {
+    @media (min-width: 992px)  { @content; }
+  }
+  @else if $point == lg {
+    @media (min-width: 1200px)  { @content; }
+  }
+}
+
+// TOOLS
+// tooltips
+@mixin hui_tooltip($content: attr(data-tooltip), $direction: top) {
+  position: relative;
+  &:before, &:after {
+    display: none;
+    z-index: 98;
+  }
+  &:hover {
+    &:after { // for text bubble
+      content: $content;
+      display: block;
+      position: absolute;
+      height: 12px; // (makes total height including padding 22px)
+      padding: 6px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #fff;
+      @include text-shadow(1px 1px #000);
+      background-color: #222;
+    }
+    @if ($direction == 'top'){
+      &:before {
+        @include triangle(down, 6px, #222);
+        top: -6px; margin-top: 0;
+        left: 47%;
+      }
+      &:after {
+        top: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+    @else if ($direction == 'bottom'){
+      &:before {
+        @include triangle(up, 6px, #222);
+        top: auto; margin-top: 0;
+        bottom: -6px;
+        left: 47%;
+      }
+      &:after {
+        bottom: -28px;
+        left: 47%; margin-left: -20px;
+      }
+    }
+  }
+}
+
+// no seleccionable
+%unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+// Responsive tool
+.toolresponsive {
+	@extend %unselectable;
+	@include bg(rgba($negro,0.2));
+	@extend %txc;
+	@include bdt(3px solid rgba(blue,0.5));
+	@include bdr(3px solid rgba(blue,0.5));
+	@include bdl(0);
+	@include bdb(0);
+	@include border-top-radius(7px);
+	@include border-right-radius(7px);
+	box-shadow:1px 1px 7px rgba($negro, 0.2);
+	@extend .fixed;
+	font-family: Arial;
+	@include fs(18px);
+	@include p(5px);
+	opacity:0.7;
+	@include b(0);
+	@include l(0);
+	@include c($negro);
+	@extend %z9;
+	.titl {
+		@extend %unselectable;
+		@include fs(16px);
+		@include pt(5px);
+		&.bdceleste {
+			@include bdt(1px solid rgba(blue,0.8));		
+			@extend %upper;
+			@extend %txc;
+		}
+	}
+	.nro {
+		@extend %txc;
+	}
+}

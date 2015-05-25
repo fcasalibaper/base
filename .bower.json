@@ -1,0 +1,14 @@
+{
+  "name": "base",
+  "homepage": "https://github.com/fcasalibaper/base",
+  "_release": "879c605bff",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "879c605bffa0d8eed54eee22acb6e830c7ff71fb"
+  },
+  "_source": "git://github.com/fcasalibaper/base.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/fcasalibaper/base.git",
+  "_direct": true
+}
